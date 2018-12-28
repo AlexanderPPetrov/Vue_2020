@@ -2,8 +2,6 @@
 
 > Vue Starter for Master Course
 
-Before you run it make sure to run server side (available in a separate repo)
-at localhost:3000 because client devServer proxies to that address
 
 ## Build Setup
 
