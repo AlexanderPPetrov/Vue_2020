@@ -3,11 +3,14 @@ import actions from './action-types';
 import dataService from '../api/data-service';
 
 export default {
-  [actions.GET_TRENDING_MOVIES]({commit}) {
+  [actions.GET_TRENDING_MOVIES]({commit}, page) {
     commit(mutations.SET_LOADER, true);
     dataService.getTrendingMovies(
+      page,
       (responseMovies) => {
         commit(mutations.SET_MOVIES, responseMovies.results);
+        commit(mutations.SET_TOTAL_RESULTS, responseMovies.total_results);
+        commit(mutations.SET_CURRENT_PAGE, responseMovies.page);
         commit(mutations.SET_LOADER, false);
       },
       (error) => {

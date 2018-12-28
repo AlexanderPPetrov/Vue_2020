@@ -48,8 +48,9 @@ export default {
     const data = Object.assign({
       method: 'get',
       baseURL: constants.baseURL,
-    }, options, {params: {api_key: constants.apiKey}});
+    }, options);
 
+    data.params = Object.assign(options.params, {api_key: constants.apiKey});
     axios(data)
       .then((response) => {
         if (options.success) {

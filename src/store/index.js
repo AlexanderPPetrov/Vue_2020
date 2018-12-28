@@ -8,6 +8,9 @@ Vue.use(Vuex);
 
 const state = {
   movies: [],
+  currentPage: 1,
+  totalResults: 0,
+  isLoading: false,
 };
 
 const store = new Vuex.Store({
