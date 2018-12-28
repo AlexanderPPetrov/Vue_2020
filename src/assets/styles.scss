@@ -1,0 +1,11 @@
+@import "./variables";
+
+// Import custom font from Google
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import "~bootstrap/scss/bootstrap";
+@import "./_card";
+@import "~font-awesome/scss/font-awesome";
+
+html,body{
+  height:100%;
+}

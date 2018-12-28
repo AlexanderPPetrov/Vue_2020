@@ -1,0 +1,56 @@
+$fa-font-path: "~font-awesome/fonts";
+
+// Override / set color variables
+$white: #fff;
+$black: #000;
+
+$body-bg: #e4e4e4;
+
+// Set brand colors
+$primary: #666;
+$secondary: #17a2b8;
+
+$success: #329c4f;
+$info: #a7e1ff;
+$warning: #f26c22;
+$danger: #e5001e;
+
+// Override button colors
+$btn-info-color: darken($info, 45);
+
+// Override alert background colors
+$state-success-bg: lighten($success, 30);
+$state-info-bg: lighten($info, 30);
+$state-warning-bg: lighten($warning, 30);
+$state-danger-bg: lighten($danger, 45);
+
+// Override alert text colors
+$state-success-text: darken($success, 30);
+$state-info-text: darken($info, 30);
+$state-warning-text: darken($warning, 30);
+$state-danger-text: darken($danger, 10);
+
+// Override badges padding (doubled because otherwise too crammed)
+$badge-padding-x: 0.8em;
+$badge-padding-y: 0.4em;
+
+// Don't make badges normal instead of bold
+$badge-font-weight: normal;
+
+// Override fonts
+$font-family-sans-serif: 'Raleway', sans-serif;
+$font-family-serif: Georgia, 'Times New Roman', Times, serif;
+$font-family-monospace: Menlo, Monaco, Consolas, 'Liberation Mono',
+'Courier New', monospace;
+$font-family-base: $font-family-sans-serif;
+
+// Set global options
+$enable-shadows: false;
+$enable-gradients: false;
+
+// Components
+
+// Card
+
+$card-border-color: transparent;
+$card-border-radius: 0;

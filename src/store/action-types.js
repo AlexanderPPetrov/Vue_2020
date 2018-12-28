@@ -1,0 +1,3 @@
+export default {
+  GET_TRENDING_MOVIES: 'GET_TRENDING_MOVIES',
+};
