@@ -13,4 +13,7 @@ export default {
   [mutations.SET_TOTAL_RESULTS](state, totalResults) {
     state.totalResults = totalResults;
   },
+  [mutations.SET_RESULT_TYPE](state, resultType) {
+    state.resultType = resultType;
+  },
 };

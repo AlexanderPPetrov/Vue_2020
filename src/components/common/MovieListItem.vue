@@ -1,6 +1,6 @@
 <template>
   <div class="col-md-6">
-    <div class="card flex-row mt-3">
+    <div class="card flex-row mt-3 movie-container">
       <div class="image-container">
         <img :src="getPoster" class="movie-thumbnail"/>
       </div>
@@ -53,5 +53,8 @@
     max-height: 126px;
     overflow: hidden;
     font-size: .875rem;
+  }
+  .movie-container {
+    max-height: 286px;
   }
 </style>

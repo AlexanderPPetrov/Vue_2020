@@ -7,13 +7,15 @@
 
   export default {
     name: 'st-pagination',
-    props: {
-      totalRows: Number,
-    },
     data() {
       return {
         currentPage: 1,
       };
+    },
+    computed: {
+      totalRows() {
+        return this.$store.state.totalResults;
+      },
     },
     methods: {
       input(value) {

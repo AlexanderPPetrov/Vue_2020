@@ -49,7 +49,7 @@
       onLogin(e) {
         e.preventDefault();
         console.log(JSON.stringify(this.form));
-        this.$router.push({path: 'home'});
+        this.$router.push({path: 'trending'});
       },
     },
   };

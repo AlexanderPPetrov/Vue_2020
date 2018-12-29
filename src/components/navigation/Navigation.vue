@@ -2,11 +2,11 @@
   <b-navbar toggleable="md" type="dark" variant="info">
     <div class="container">
       <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
-      <b-navbar-brand href="#">NavBar</b-navbar-brand>
       <b-collapse is-nav id="nav_collapse">
         <b-navbar-nav>
-          <b-nav-item to="/home" href="#">Начало</b-nav-item>
+          <b-nav-item to="/trending" href="#">Популярни</b-nav-item>
           <b-nav-item to="/movies" >Филми</b-nav-item>
+          <b-nav-item to="/series" >Сериали</b-nav-item>
         </b-navbar-nav>
         <b-navbar-nav class="ml-auto">
           <b-nav-form>

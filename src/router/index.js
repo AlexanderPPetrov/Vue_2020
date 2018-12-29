@@ -2,8 +2,9 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Login from '../components/login';
 import Navigation from '../components/navigation/Navigation';
-import Home from '../components/home/Home';
+import Trending from '../components/trending/Trending';
 import Movies from '../components/movies/Movies';
+import Series from '../components/series/Series';
 
 Vue.use(Router);
 
@@ -17,11 +18,11 @@ export default new Router({
       },
     },
     {
-      path: '/home',
-      name: 'Home',
+      path: '/trending',
+      name: 'Trending',
       components: {
         navigation: Navigation,
-        default: Home,
+        default: Trending,
       },
     },
     {
@@ -30,6 +31,14 @@ export default new Router({
       components: {
         navigation: Navigation,
         default: Movies,
+      },
+    },
+    {
+      path: '/series',
+      name: 'Series',
+      components: {
+        navigation: Navigation,
+        default: Series,
       },
     },
   ],

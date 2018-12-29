@@ -11,6 +11,7 @@ const state = {
   currentPage: 1,
   totalResults: 0,
   isLoading: false,
+  resultType: 'movie',
 };
 
 const store = new Vuex.Store({

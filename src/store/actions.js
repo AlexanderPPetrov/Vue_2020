@@ -19,4 +19,36 @@ export default {
       },
     );
   },
+  [actions.GET_TOP_RATED_MOVIES]({commit}, page) {
+    commit(mutations.SET_LOADER, true);
+    dataService.getTopRatedMovies(
+      page,
+      (responseMovies) => {
+        commit(mutations.SET_MOVIES, responseMovies.results);
+        commit(mutations.SET_TOTAL_RESULTS, responseMovies.total_results);
+        commit(mutations.SET_CURRENT_PAGE, responseMovies.page);
+        commit(mutations.SET_LOADER, false);
+      },
+      (error) => {
+        console.log(error);
+        commit(mutations.SET_LOADER, false);
+      },
+    );
+  },
+  [actions.GET_TOP_RATED_TV]({commit}, page) {
+    commit(mutations.SET_LOADER, true);
+    dataService.getTopRatedTv(
+      page,
+      (responseMovies) => {
+        commit(mutations.SET_MOVIES, responseMovies.results);
+        commit(mutations.SET_TOTAL_RESULTS, responseMovies.total_results);
+        commit(mutations.SET_CURRENT_PAGE, responseMovies.page);
+        commit(mutations.SET_LOADER, false);
+      },
+      (error) => {
+        console.log(error);
+        commit(mutations.SET_LOADER, false);
+      },
+    );
+  },
 };
