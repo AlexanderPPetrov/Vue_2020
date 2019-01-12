@@ -1,4 +1,6 @@
-# VueMasterCourse
+Въведение в дисциплината:
+
+https://docs.google.com/document/d/1iY6BKR3gVuDdd7BbxH9Cl4AqhufrD4muPuoL8ZzgRyk/edit?usp=sharing
 
 Изисквания за проект по
   “Съвременни JavaScript рамки за изграждане на клиентски приложения”
