@@ -51,4 +51,18 @@ export default {
       },
     );
   },
+  [actions.GET_MOVIE_DETAILS]({commit}, id) {
+    commit(mutations.SET_LOADER, true);
+    dataService.getMovieDetails(
+      id,
+      (responseMovie) => {
+        commit(mutations.SET_CURRENT_MOVIE, responseMovie);
+        commit(mutations.SET_LOADER, false);
+      },
+      (error) => {
+        console.log(error);
+        commit(mutations.SET_LOADER, false);
+      },
+    );
+  },
 };

@@ -12,6 +12,9 @@ const state = {
   totalResults: 0,
   isLoading: false,
   resultType: 'movie',
+  title: '',
+  favoriteMovies: [],
+  currentMovie: null,
 };
 
 const store = new Vuex.Store({

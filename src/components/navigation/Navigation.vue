@@ -5,8 +5,9 @@
       <b-collapse is-nav id="nav_collapse">
         <b-navbar-nav>
           <b-nav-item to="/trending" href="#">Популярни</b-nav-item>
-          <b-nav-item to="/movies" >Филми</b-nav-item>
-          <b-nav-item to="/series" >Сериали</b-nav-item>
+          <b-nav-item to="/movies">Филми</b-nav-item>
+          <b-nav-item to="/series">Сериали</b-nav-item>
+          <b-nav-item to="/favorite">Любими</b-nav-item>
         </b-navbar-nav>
         <b-navbar-nav class="ml-auto">
           <b-nav-form>

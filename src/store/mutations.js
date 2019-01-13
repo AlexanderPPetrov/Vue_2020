@@ -16,4 +16,13 @@ export default {
   [mutations.SET_RESULT_TYPE](state, resultType) {
     state.resultType = resultType;
   },
+  [mutations.ADD_FAVORITE](state, movie) {
+    state.favoriteMovies.push(movie);
+  },
+  [mutations.SET_FAVORITE_MOVIES](state, movies) {
+    state.favoriteMovies = movies;
+  },
+  [mutations.SET_CURRENT_MOVIE](state, movie) {
+    state.currentMovie = movie;
+  },
 };

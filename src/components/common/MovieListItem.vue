@@ -6,10 +6,13 @@
       </div>
       <div class="movie-info d-flex flex-column p-3">
         <h5>{{ title }}</h5>
+        <div>
+          <i @click="addToFavorite" class="fa fa-star fav-icon" :class="getIsFav"></i>
+        </div>
         <p class="text-dark"><span>{{ date | moment("MMMM D Y") }}</span>
         <p class="text-black-50 overview-info">{{ overview }}</p>
         <div class="mt-auto d-flex justify-content-end">
-          <b-button href="#" variant="default">View details</b-button>
+          <b-button @click="viewMovieDetails" variant="default">View details</b-button>
         </div>
       </div>
     </div>
@@ -18,6 +21,7 @@
 
 <script>
   import constants from '../../constants';
+  import mutations from '../../store/mutation-types';
 
   export default {
     name: 'st-movie-list-item',
@@ -40,12 +44,34 @@
         }
         return poster;
       },
+      getIsFav() {
+        if(this.$store.state.favoriteMovies.filter(movie => movie.id == this.id).length){
+          return 'active';
+        }
+        return '';
+      }
     },
+    methods: {
+        addToFavorite(){
+          if(this.getIsFav){
+            const remainingMovies = this.$store.getters.getRemainingFavMovies(this.id);
+            this.$store.commit(mutations.SET_FAVORITE_MOVIES, remainingMovies);
+          }else{
+            const movie = this.$store.getters.getMovieById(this.id);
+            this.$store.commit(mutations.ADD_FAVORITE, movie);
+          }
+        },
+        viewMovieDetails(){
+          const currentMovie = this.$store.getters.getMovieById(this.id);
+          this.$store.commit(mutations.SET_CURRENT_MOVIE, currentMovie);
+          this.$router.push({ name: 'Movie', params: { id: this.id} });
+        }
+    }
 
   };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
   .movie-thumbnail {
     width: 189px;
   }
@@ -56,5 +82,11 @@
   }
   .movie-container {
     max-height: 286px;
+  }
+  .fav-icon {
+    cursor: pointer;
+    &.active {
+      color: orange;
+    }
   }
 </style>

@@ -10,4 +10,7 @@ export default {
   getTopRatedTv(params, success, failure) {
     networkClient.get('tv/top_rated', success, failure, params);
   },
+  getMovieDetails(id, success, failure) {
+    networkClient.get(`movie/${id}`, success, failure, id);
+  },
 };
