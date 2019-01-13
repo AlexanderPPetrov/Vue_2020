@@ -15,8 +15,11 @@ https://docs.google.com/document/d/1iY6BKR3gVuDdd7BbxH9Cl4AqhufrD4muPuoL8ZzgRyk/
 За да си качим проекта в собствено репозитори:
 
 git remote rm origin
+
 git init
+
 git remote add origin git@github.com:User/UserRepo.git
+
 git push -u origin master
 
 
