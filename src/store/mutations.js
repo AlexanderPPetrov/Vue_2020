@@ -25,4 +25,7 @@ export default {
   [mutations.SET_CURRENT_MOVIE](state, movie) {
     state.currentMovie = movie;
   },
+  [mutations.SET_MOVIES_GENRES](state, genres) {
+    state.movieGenres = genres;
+  },
 };

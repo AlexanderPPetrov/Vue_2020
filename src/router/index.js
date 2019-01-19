@@ -7,6 +7,8 @@ import Movies from '../components/movies/Movies';
 import Series from '../components/series/Series';
 import Favorite from '../components/favorite/Favorite';
 import MovieDetails from '../components/moviedetails/MovieDetails';
+import DiscoverMovies from '../components/discover/DiscoverMovies';
+import Footer from '../components/footer/Footer';
 
 Vue.use(Router);
 
@@ -20,11 +22,21 @@ export default new Router({
       },
     },
     {
+      path: '/discover',
+      name: 'DiscoverMovies',
+      components: {
+        navigation: Navigation,
+        default: DiscoverMovies,
+        footer: Footer,
+      },
+    },
+    {
       path: '/trending',
       name: 'Trending',
       components: {
         navigation: Navigation,
         default: Trending,
+        footer: Footer,
       },
     },
     {
@@ -33,6 +45,7 @@ export default new Router({
       components: {
         navigation: Navigation,
         default: Movies,
+        footer: Footer,
       },
     },
     {
@@ -41,6 +54,7 @@ export default new Router({
       components: {
         navigation: Navigation,
         default: Series,
+        footer: Footer,
       },
     },
     {
@@ -49,6 +63,7 @@ export default new Router({
       components: {
         navigation: Navigation,
         default: Favorite,
+        footer: Footer,
       },
     },
     {
@@ -57,6 +72,7 @@ export default new Router({
       components: {
         navigation: Navigation,
         default: MovieDetails,
+        footer: Footer,
       },
     },
   ],
