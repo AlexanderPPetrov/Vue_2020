@@ -9,6 +9,7 @@
           <b-nav-item to="/movies">Филми</b-nav-item>
           <b-nav-item to="/series">Сериали</b-nav-item>
           <b-nav-item to="/favorite">Любими</b-nav-item>
+          <b-nav-item to="/games">Игри</b-nav-item>
         </b-navbar-nav>
         <b-navbar-nav class="ml-auto">
           <st-movie-search></st-movie-search>

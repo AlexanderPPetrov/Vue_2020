@@ -13,10 +13,15 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "apollo-cache-inmemory": "^1.5.1",
+    "apollo-client": "^2.5.1",
+    "apollo-link-http": "^1.5.14",
     "axios": "^0.18.0",
     "bootstrap": "^4.1.1",
     "bootstrap-vue": "^2.0.0-rc.11",
     "font-awesome": "^4.7.0",
+    "graphql": "^14.1.1",
+    "graphql-tag": "^2.10.1",
     "popper.js": "^1.14.3",
     "uuid": "^3.3.2",
     "vue": "^2.5.2",

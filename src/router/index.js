@@ -8,6 +8,7 @@ import Series from '../components/series/Series';
 import Favorite from '../components/favorite/Favorite';
 import MovieDetails from '../components/moviedetails/MovieDetails';
 import DiscoverMovies from '../components/discover/DiscoverMovies';
+import Games from '../components/games/Games';
 import Footer from '../components/footer/Footer';
 
 Vue.use(Router);
@@ -72,6 +73,15 @@ export default new Router({
       components: {
         navigation: Navigation,
         default: MovieDetails,
+        footer: Footer,
+      },
+    },
+    {
+      path: '/games',
+      name: 'Games',
+      components: {
+        navigation: Navigation,
+        default: Games,
         footer: Footer,
       },
     },

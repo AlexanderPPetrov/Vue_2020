@@ -16,6 +16,7 @@ const state = {
   favoriteMovies: [],
   currentMovie: null,
   movieGenres: [],
+  gamesList: []
 };
 
 const store = new Vuex.Store({

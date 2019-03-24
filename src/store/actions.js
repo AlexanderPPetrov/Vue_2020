@@ -1,6 +1,8 @@
 import mutations from './mutation-types';
 import actions from './action-types';
 import dataService from '../api/data-service';
+import graphQlService from '../api/graphql-service';
+
 
 export default {
   [actions.GET_TRENDING_MOVIES]({commit}, page) {
@@ -119,6 +121,20 @@ export default {
       (response) => {
         console.log(response);
         commit(mutations.SET_LOADER, false);
+      },
+      (error) => {
+        console.log(error);
+        commit(mutations.SET_LOADER, false);
+      },
+    );
+  },
+  [actions.GET_GAMES_LIST]({commit}) {
+    commit(mutations.SET_LOADER, true);
+    graphQlService.getGamesList(
+      (response) => {
+        console.log(response);
+        commit(mutations.SET_LOADER, false);
+        commit(mutations.SET_GAMES_LIST, response.data.games);
       },
       (error) => {
         console.log(error);
