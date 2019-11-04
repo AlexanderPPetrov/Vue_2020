@@ -4,7 +4,21 @@ $fa-font-path: "~font-awesome/fonts";
 $white: #fff;
 $black: #000;
 
-$body-bg: #e4e4e4;
+$body-bg: #efefef;
+
+$theme-colors: (
+  "primary": #6a89fd,
+  "primary-dark": #5968cb,
+  "action": #53ad05,
+  "secondary": #687b86,
+  "action-secondary": #ff8f2b,
+  "dark-overlay": #292d29,
+  "title": #666666,
+  "border-light": #e6e6e6,
+  "border-ultra-light": #f1f1f1,
+);
+
+
 
 // Set brand colors
 $primary: #666;
@@ -53,4 +67,8 @@ $enable-gradients: false;
 // Card
 
 $card-border-color: transparent;
-$card-border-radius: 0;
+$card-border-radius: .25rem;
+
+
+// Buttons
+$btn-border-radius: 25rem;
